@@ -1,0 +1,1321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="http://s4htcsaptui.westeurope.cloudapp.azure.com:50000/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://s4htcsaptui.westeurope.cloudapp.azure.com:50000/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://s4htcsaptui.westeurope.cloudapp.azure.com:50000/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
+        <edmx:Include Namespace="Org.OData.Capabilities.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://s4htcsaptui.westeurope.cloudapp.azure.com:50000/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://s4htcsaptui.westeurope.cloudapp.azure.com:50000/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="SAP__common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://s4htcsaptui.westeurope.cloudapp.azure.com:50000/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://s4htcsaptui.westeurope.cloudapp.azure.com:50000/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="SAP__core"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://s4htcsaptui.westeurope.cloudapp.azure.com:50000/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://s4htcsaptui.westeurope.cloudapp.azure.com:50000/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://s4htcsaptui.westeurope.cloudapp.azure.com:50000/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="http://s4htcsaptui.westeurope.cloudapp.azure.com:50000/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="cds_zdmo_rapgeneratorbo" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <EntityType Name="I_DraftAdministrativeDataType" sap:label="Draft Administration Data" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="DraftUUID"/>
+                    <PropertyRef Name="DraftEntityType"/>
+                </Key>
+                <Property Name="DraftUUID" Type="Edm.Guid" Nullable="false" sap:label="Draft (Technical ID)"/>
+                <Property Name="DraftEntityType" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase" sap:label="Draft Entity ID"/>
+                <Property Name="CreationDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Created On"/>
+                <Property Name="CreatedByUser" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:text="CreatedByUserDescription" sap:label="Draft Created By"/>
+                <Property Name="LastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Last Changed On"/>
+                <Property Name="LastChangedByUser" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:text="LastChangedByUserDescription" sap:label="Draft Last Changed By"/>
+                <Property Name="DraftAccessType" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Draft Access Type"/>
+                <Property Name="ProcessingStartDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft In Process Since"/>
+                <Property Name="InProcessByUser" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:text="InProcessByUserDescription" sap:label="Draft In Process By"/>
+                <Property Name="DraftIsKeptByUser" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Draft Is Kept By User"/>
+                <Property Name="EnqueueStartDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Locked Since"/>
+                <Property Name="DraftIsCreatedByMe" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Draft Created By Me"/>
+                <Property Name="DraftIsLastChangedByMe" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Draft Last Changed By Me"/>
+                <Property Name="DraftIsProcessedByMe" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Draft In Process By Me"/>
+                <Property Name="CreatedByUserDescription" Type="Edm.String" MaxLength="80" sap:label="Draft Created By (Description)"/>
+                <Property Name="LastChangedByUserDescription" Type="Edm.String" MaxLength="80" sap:label="Draft Last Changed By (Description)"/>
+                <Property Name="InProcessByUserDescription" Type="Edm.String" MaxLength="80" sap:label="Draft In Process By (Description)"/>
+            </EntityType>
+            <EntityType Name="RAPGeneratorProjectsType" sap:label="Projection View forRAPGeneratorBO" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="RapNodeUUID"/>
+                    <PropertyRef Name="IsActiveEntity"/>
+                </Key>
+                <Property Name="copyProject_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="createBO_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Edit_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Prepare_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddToManageBusinessConfig_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ADTLink_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CustomizingTable_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MultiInlineEdit_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Namespace_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PackageName_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Delete_mc" Type="Edm.Boolean" sap:label="Dyn. Method Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Update_mc" Type="Edm.Boolean" sap:label="Dyn. Method Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RapNodeUUID" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:quickinfo="16 Byte UUID in 16 Bytes (Raw Format)"/>
+                <Property Name="BoName" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Object name" sap:quickinfo="XCO ABAP Repository: Object name" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="RootEntityName" Type="Edm.String" MaxLength="40" sap:label="Root Entity Name" sap:quickinfo="Entity Name"/>
+                <Property Name="Namespace" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:field-control="Namespace_fc" sap:label="Namespace"/>
+                <Property Name="PackageName" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:field-control="PackageName_fc" sap:label="Package" sap:quickinfo="XCO Package: Package" sap:value-list="standard"/>
+                <Property Name="TransportRequest" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Transport" sap:quickinfo="XCO: Transport"/>
+                <Property Name="SkipActivation" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Truth Value" sap:quickinfo="Truth Value: True/False"/>
+                <Property Name="ImplementationType" Type="Edm.String" MaxLength="30" sap:value-list="fixed-values"/>
+                <Property Name="DataSourceType" Type="Edm.String" MaxLength="30" sap:value-list="fixed-values"/>
+                <Property Name="ABAPLanguageVersion" Type="Edm.String" MaxLength="30" sap:label="ABAP Language Vers." sap:quickinfo="ABAP Language Version" sap:creatable="false" sap:updatable="false" sap:value-list="fixed-values"/>
+                <Property Name="BindingType" Type="Edm.String" MaxLength="30" sap:value-list="fixed-values"/>
+                <Property Name="PackageLanguageVersion" Type="Edm.String" MaxLength="1" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="DraftEnabled" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Truth Value" sap:quickinfo="Truth Value: True/False" sap:value-list="fixed-values"/>
+                <Property Name="Suffix" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Object name" sap:quickinfo="XCO ABAP Repository: Object name"/>
+                <Property Name="Prefix" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Object name" sap:quickinfo="XCO ABAP Repository: Object name"/>
+                <Property Name="MultiInlineEdit" Type="Edm.Boolean" sap:display-format="UpperCase" sap:field-control="MultiInlineEdit_fc" sap:label="Truth Value" sap:quickinfo="Truth Value: True/False"/>
+                <Property Name="CustomizingTable" Type="Edm.Boolean" sap:display-format="UpperCase" sap:field-control="CustomizingTable_fc" sap:label="Truth Value" sap:quickinfo="Truth Value: True/False"/>
+                <Property Name="AddToManageBusinessConfig" Type="Edm.Boolean" sap:display-format="UpperCase" sap:field-control="AddToManageBusinessConfig_fc" sap:label="Truth Value" sap:quickinfo="Truth Value: True/False"/>
+                <Property Name="BusinessConfName" Type="Edm.String" MaxLength="50"/>
+                <Property Name="BusinessConfIdentifier" Type="Edm.String" MaxLength="20"/>
+                <Property Name="BusinessConfDescription" Type="Edm.String" MaxLength="50"/>
+                <Property Name="CreatedBy" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="User Name"/>
+                <Property Name="CreatedAt" Type="Edm.DateTimeOffset" Precision="7" sap:label="Time Stamp" sap:quickinfo="UTC Time Stamp in Long Form (YYYYMMDDhhmmssmmmuuun)"/>
+                <Property Name="LastChangedBy" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="User Name"/>
+                <Property Name="LastChangedAt" Type="Edm.DateTimeOffset" Precision="7" sap:label="Time Stamp" sap:quickinfo="UTC Time Stamp in Long Form (YYYYMMDDhhmmssmmmuuun)"/>
+                <Property Name="LocalLastChangedAt" Type="Edm.DateTimeOffset" Precision="7" sap:label="Time Stamp" sap:quickinfo="UTC Time Stamp in Long Form (YYYYMMDDhhmmssmmmuuun)"/>
+                <Property Name="JsonString" Type="Edm.String" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="JsonIsValid" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Truth Value" sap:quickinfo="Truth Value: True/False" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="BoIsGenerated" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Truth Value" sap:quickinfo="Truth Value: True/False" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="JobName" Type="Edm.String" MaxLength="32" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="JobCount" Type="Edm.String" MaxLength="8" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="ADTLink" Type="Edm.String" MaxLength="255" sap:field-control="ADTLink_fc"/>
+                <Property Name="HideADTLink" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Hide ADT Link" sap:quickinfo="Truth Value: True/False" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="JobStatus" Type="Edm.String" MaxLength="1" sap:label="Job Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="JobStatusText" Type="Edm.String" MaxLength="20" sap:label="Generation" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="JobStatusCriticality" Type="Edm.Byte" sap:label="Criticality" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HasDraftEntity" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Has Draft" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="DraftEntityCreationDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Created On" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="DraftEntityLastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Last Changed On" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="HasActiveEntity" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Has active" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="IsActiveEntity" Type="Edm.Boolean" Nullable="false" sap:display-format="UpperCase" sap:label="Is active" sap:creatable="false" sap:updatable="false"/>
+                <NavigationProperty Name="DraftAdministrativeData" Relationship="cds_zdmo_rapgeneratorbo.assoc_5240E710FBAC1AE28721EC54C913900B" FromRole="FromRole_assoc_5240E710FBAC1AE28721EC54C913900B" ToRole="ToRole_assoc_5240E710FBAC1AE28721EC54C913900B"/>
+                <NavigationProperty Name="SiblingEntity" Relationship="cds_zdmo_rapgeneratorbo.assoc_8BD5016932CCD2D0AF29AF4B7DDCC428" FromRole="FromRole_assoc_8BD5016932CCD2D0AF29AF4B7DDCC428" ToRole="ToRole_assoc_8BD5016932CCD2D0AF29AF4B7DDCC428"/>
+                <NavigationProperty Name="to_RAPGeneratorBONode" Relationship="cds_zdmo_rapgeneratorbo.assoc_4CA1BC5785FD253FA4B31C6EC291A4D7" FromRole="FromRole_assoc_4CA1BC5785FD253FA4B31C6EC291A4D7" ToRole="ToRole_assoc_4CA1BC5785FD253FA4B31C6EC291A4D7"/>
+            </EntityType>
+            <EntityType Name="RAPGeneratorProjectEntitiesType" sap:label="Projection View forRAPGeneratorBONode" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="NodeUUID"/>
+                    <PropertyRef Name="IsActiveEntity"/>
+                </Key>
+                <Property Name="addChild2_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ControlStructure_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DraftTableName_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FieldNameCreatedAt_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FieldNameCreatedBy_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FieldNameEtagMaster_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FieldNameLastChangedBy_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FieldNameParentUUID_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FieldNameRootUUID_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FieldNameTotalEtag_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FieldNameUUID_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="QueryImplementationClass_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ServiceBinding_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ServiceDefinition_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Delete_mc" Type="Edm.Boolean" sap:label="Dyn. Method Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Update_mc" Type="Edm.Boolean" sap:label="Dyn. Method Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NodeUUID" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:quickinfo="16 Byte UUID in 16 Bytes (Raw Format)"/>
+                <Property Name="HeaderUUID" Type="Edm.Guid" sap:label="UUID" sap:quickinfo="16 Byte UUID in 16 Bytes (Raw Format)" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="ParentUUID" Type="Edm.Guid" sap:text="ParentEntityName" sap:label="UUID" sap:quickinfo="16 Byte UUID in 16 Bytes (Raw Format)" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="RootUUID" Type="Edm.Guid" sap:label="UUID" sap:quickinfo="16 Byte UUID in 16 Bytes (Raw Format)" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="NodeNumber" Type="Edm.Byte" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="IsRootNode" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Truth Value" sap:quickinfo="Truth Value: True/False" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="EntityName" Type="Edm.String" MaxLength="40" sap:label="Entity Name"/>
+                <Property Name="ParentEntityName" Type="Edm.String" MaxLength="40" sap:label="Parent Entity Name" sap:quickinfo="Entity Name" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="ABAPLanguageVersion" Type="Edm.String" MaxLength="30" sap:label="ABAP Language Vers." sap:quickinfo="ABAP Language Version" sap:creatable="false" sap:updatable="false" sap:value-list="fixed-values"/>
+                <Property Name="DataSourceType" Type="Edm.String" MaxLength="30" sap:creatable="false" sap:updatable="false" sap:value-list="fixed-values"/>
+                <Property Name="DataSource" Type="Edm.String" MaxLength="30" sap:value-list="standard"/>
+                <Property Name="ParentDataSource" Type="Edm.String" MaxLength="30" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="PackageName" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Package" sap:quickinfo="XCO Package: Package" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="ViewTypeValue" Type="Edm.String" MaxLength="1"/>
+                <Property Name="FieldNameObjectID" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Field name" sap:quickinfo="XCO ABAP Dictionary: Field name" sap:value-list="fixed-values"/>
+                <Property Name="FieldNameEtagMaster" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:field-control="FieldNameEtagMaster_fc" sap:label="Field name" sap:quickinfo="XCO ABAP Dictionary: Field name" sap:value-list="fixed-values"/>
+                <Property Name="FieldNameTotalEtag" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:field-control="FieldNameTotalEtag_fc" sap:label="Field name" sap:quickinfo="XCO ABAP Dictionary: Field name" sap:value-list="fixed-values"/>
+                <Property Name="FieldNameUUID" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:field-control="FieldNameUUID_fc" sap:label="Field name" sap:quickinfo="XCO ABAP Dictionary: Field name" sap:value-list="fixed-values"/>
+                <Property Name="FieldNameParentUUID" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:field-control="FieldNameParentUUID_fc" sap:label="Field name" sap:quickinfo="XCO ABAP Dictionary: Field name" sap:value-list="fixed-values"/>
+                <Property Name="FieldNameRootUUID" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:field-control="FieldNameRootUUID_fc" sap:label="Field name" sap:quickinfo="XCO ABAP Dictionary: Field name" sap:value-list="fixed-values"/>
+                <Property Name="FieldNameCreatedBy" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:field-control="FieldNameCreatedBy_fc" sap:label="Field name" sap:quickinfo="XCO ABAP Dictionary: Field name" sap:value-list="fixed-values"/>
+                <Property Name="FieldNameCreatedAt" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:field-control="FieldNameCreatedAt_fc" sap:label="Field name" sap:quickinfo="XCO ABAP Dictionary: Field name" sap:value-list="fixed-values"/>
+                <Property Name="FieldNameLastChangedBy" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:field-control="FieldNameLastChangedBy_fc" sap:label="Field name" sap:quickinfo="XCO ABAP Dictionary: Field name" sap:value-list="fixed-values"/>
+                <Property Name="FieldNameLastChangedAt" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Field name" sap:quickinfo="XCO ABAP Dictionary: Field name" sap:creatable="false" sap:updatable="false" sap:value-list="fixed-values"/>
+                <Property Name="FieldNameLocLastChangedAt" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Field name" sap:quickinfo="XCO ABAP Dictionary: Field name" sap:creatable="false" sap:updatable="false" sap:value-list="fixed-values"/>
+                <Property Name="CdsIView" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Object name" sap:quickinfo="XCO CDS: Object name"/>
+                <Property Name="CdsRView" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Object name" sap:quickinfo="XCO CDS: Object name"/>
+                <Property Name="CdsPView" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Object name" sap:quickinfo="XCO CDS: Object name"/>
+                <Property Name="MdeView" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Object name" sap:quickinfo="XCO CDS: Object name"/>
+                <Property Name="BehaviorImplementationClass" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Object name" sap:quickinfo="XCO CDS: Object name"/>
+                <Property Name="ServiceDefinition" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:field-control="ServiceDefinition_fc" sap:label="Object name" sap:quickinfo="XCO CDS: Object name"/>
+                <Property Name="ServiceBinding" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:field-control="ServiceBinding_fc" sap:label="Object name" sap:quickinfo="XCO CDS: Object name"/>
+                <Property Name="ControlStructure" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:field-control="ControlStructure_fc" sap:label="Object name" sap:quickinfo="XCO CDS: Object name"/>
+                <Property Name="QueryImplementationClass" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:field-control="QueryImplementationClass_fc" sap:label="Object name" sap:quickinfo="XCO CDS: Object name"/>
+                <Property Name="DraftTableName" Type="Edm.String" MaxLength="16" sap:display-format="UpperCase" sap:field-control="DraftTableName_fc" sap:label="Object name" sap:quickinfo="XCO Database table : Object name"/>
+                <Property Name="HierarchyDistanceFromRoot" Type="Edm.Int32" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="HierarchyDescendantCount" Type="Edm.Int32" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="HierarchyDrillState" Type="Edm.String" MaxLength="20" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="HierarchyPreorderRank" Type="Edm.Int32" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="LocalLastChangedAt" Type="Edm.DateTimeOffset" Precision="7" sap:label="Time Stamp" sap:quickinfo="UTC Time Stamp in Long Form (YYYYMMDDhhmmssmmmuuun)"/>
+                <Property Name="HasDraftEntity" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Has Draft" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="DraftEntityCreationDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Created On" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="DraftEntityLastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Last Changed On" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="HasActiveEntity" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Has active" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="IsActiveEntity" Type="Edm.Boolean" Nullable="false" sap:display-format="UpperCase" sap:label="Is active" sap:creatable="false" sap:updatable="false"/>
+                <NavigationProperty Name="DraftAdministrativeData" Relationship="cds_zdmo_rapgeneratorbo.assoc_ED84634C6708738D5A06E01E1C9C0FEF" FromRole="FromRole_assoc_ED84634C6708738D5A06E01E1C9C0FEF" ToRole="ToRole_assoc_ED84634C6708738D5A06E01E1C9C0FEF"/>
+                <NavigationProperty Name="SiblingEntity" Relationship="cds_zdmo_rapgeneratorbo.assoc_9FAD454768572E3FFE0A1CBE9C5528D3" FromRole="FromRole_assoc_9FAD454768572E3FFE0A1CBE9C5528D3" ToRole="ToRole_assoc_9FAD454768572E3FFE0A1CBE9C5528D3"/>
+                <NavigationProperty Name="to_RAPGeneratorBO" Relationship="cds_zdmo_rapgeneratorbo.assoc_51AC1CE5B6740EBB2DDC97D4B2D82C1A" FromRole="FromRole_assoc_51AC1CE5B6740EBB2DDC97D4B2D82C1A" ToRole="ToRole_assoc_51AC1CE5B6740EBB2DDC97D4B2D82C1A"/>
+            </EntityType>
+            <EntityType Name="ABAPLanguageVersionsType" sap:label="RAP Generator - ABAP Language Version" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="language_version"/>
+                </Key>
+                <Property Name="language_version" Type="Edm.String" Nullable="false" MaxLength="30"/>
+            </EntityType>
+            <EntityType Name="BindingTypesType" sap:label="RAP Generator - Binding Type" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="name"/>
+                </Key>
+                <Property Name="name" Type="Edm.String" Nullable="false" MaxLength="50"/>
+            </EntityType>
+            <EntityType Name="zdmo_I_rap_generator_bool_VHType" sap:label="value help for boolean values" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="bool_value"/>
+                </Key>
+                <Property Name="bool_value" Type="Edm.Boolean" Nullable="false" sap:display-format="UpperCase" sap:text="name" sap:label="Truth Value" sap:quickinfo="Truth Value: True/False"/>
+                <Property Name="name" Type="Edm.String" MaxLength="10"/>
+            </EntityType>
+            <EntityType Name="DataSourcesType" sap:label="RAP Generator - Data Sources" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="name"/>
+                    <PropertyRef Name="type"/>
+                    <PropertyRef Name="language_version"/>
+                    <PropertyRef Name="parent_data_source"/>
+                    <PropertyRef Name="is_root_node"/>
+                    <PropertyRef Name="package_name"/>
+                </Key>
+                <Property Name="name" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Data Source Name"/>
+                <Property Name="type" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="language_version" Type="Edm.String" Nullable="false" MaxLength="30"/>
+                <Property Name="parent_data_source" Type="Edm.String" Nullable="false" MaxLength="30"/>
+                <Property Name="is_root_node" Type="Edm.Boolean" Nullable="false" sap:display-format="UpperCase" sap:label="Truth Value" sap:quickinfo="Truth Value: True/False"/>
+                <Property Name="package_name" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase" sap:label="Package" sap:quickinfo="XCO Package: Package"/>
+            </EntityType>
+            <EntityType Name="DataSourceTypesType" sap:label="RAP Generator - Datasource Type" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="type"/>
+                </Key>
+                <Property Name="type" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Data Source Type"/>
+            </EntityType>
+            <EntityType Name="DataSourceFieldsType" sap:label="RAP Generator - Datsource Fields" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="field"/>
+                    <PropertyRef Name="name"/>
+                    <PropertyRef Name="type"/>
+                    <PropertyRef Name="language_version"/>
+                </Key>
+                <Property Name="field" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Field Name"/>
+                <Property Name="name" Type="Edm.String" Nullable="false" MaxLength="50"/>
+                <Property Name="type" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="language_version" Type="Edm.String" Nullable="false" MaxLength="30"/>
+                <Property Name="data_element" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Data element" sap:quickinfo="XCO ABAP Dictionary: Object name"/>
+                <Property Name="built_in_type" Type="Edm.String" MaxLength="4" sap:label="Built in type"/>
+                <Property Name="built_in_type_length" Type="Edm.String" MaxLength="6" sap:display-format="NonNegative" sap:label="Length"/>
+                <Property Name="built_in_type_decimals" Type="Edm.String" MaxLength="6" sap:display-format="NonNegative" sap:label="Decimals"/>
+            </EntityType>
+            <EntityType Name="ImplementationTypesType" sap:label="RAP Generator - Implementation Types" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="name"/>
+                </Key>
+                <Property Name="name" Type="Edm.String" Nullable="false" MaxLength="50"/>
+            </EntityType>
+            <EntityType Name="PackagesType" sap:label="RAP Generator - Packages" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="name"/>
+                    <PropertyRef Name="language_version"/>
+                </Key>
+                <Property Name="name" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Package Name"/>
+                <Property Name="language_version" Type="Edm.String" Nullable="false" MaxLength="30"/>
+            </EntityType>
+            <EntityType Name="SAP__Currency" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CurrencyCode"/>
+                </Key>
+                <Property Name="CurrencyCode" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency" sap:semantics="currency-code"/>
+                <Property Name="ISOCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="ISO code"/>
+                <Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="15" sap:label="Short text"/>
+                <Property Name="DecimalPlaces" Type="Edm.Byte" Nullable="false" sap:label="Decimals"/>
+            </EntityType>
+            <EntityType Name="SAP__UnitOfMeasure" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="UnitCode"/>
+                </Key>
+                <Property Name="UnitCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Internal UoM" sap:semantics="unit-of-measure"/>
+                <Property Name="ISOCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="ISO code"/>
+                <Property Name="ExternalCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Commercial"/>
+                <Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="UoM Text"/>
+                <Property Name="DecimalPlaces" Type="Edm.Int16" sap:label="Decimal Places"/>
+            </EntityType>
+            <ComplexType Name="DummyFunctionImportResult">
+                <Property Name="IsInvalid" Type="Edm.Boolean" sap:label="TRUE"/>
+            </ComplexType>
+            <ComplexType Name="ZDMO_R_RapGeneratorBONode">
+                <Property Name="BehaviorImplementationClass" Type="Edm.String" MaxLength="30" sap:label="Object name"/>
+                <Property Name="CdsIView" Type="Edm.String" MaxLength="30" sap:label="Object name"/>
+                <Property Name="CdsPView" Type="Edm.String" MaxLength="30" sap:label="Object name"/>
+                <Property Name="CdsRView" Type="Edm.String" MaxLength="30" sap:label="Object name"/>
+                <Property Name="ControlStructure" Type="Edm.String" MaxLength="30" sap:label="Object name"/>
+                <Property Name="DataSource" Type="Edm.String" MaxLength="30"/>
+                <Property Name="DraftTableName" Type="Edm.String" MaxLength="16" sap:label="Object name"/>
+                <Property Name="EntityName" Type="Edm.String" MaxLength="40" sap:label="Entity Name"/>
+                <Property Name="FieldNameCreatedAt" Type="Edm.String" MaxLength="30" sap:label="Field name"/>
+                <Property Name="FieldNameCreatedBy" Type="Edm.String" MaxLength="30" sap:label="Field name"/>
+                <Property Name="FieldNameEtagMaster" Type="Edm.String" MaxLength="30" sap:label="Field name"/>
+                <Property Name="FieldNameLastChangedAt" Type="Edm.String" MaxLength="30" sap:label="Field name"/>
+                <Property Name="FieldNameLastChangedBy" Type="Edm.String" MaxLength="30" sap:label="Field name"/>
+                <Property Name="FieldNameLocLastChangedAt" Type="Edm.String" MaxLength="30" sap:label="Field name"/>
+                <Property Name="FieldNameObjectID" Type="Edm.String" MaxLength="30" sap:label="Field name"/>
+                <Property Name="FieldNameParentUUID" Type="Edm.String" MaxLength="30" sap:label="Field name"/>
+                <Property Name="FieldNameRootUUID" Type="Edm.String" MaxLength="30" sap:label="Field name"/>
+                <Property Name="FieldNameTotalEtag" Type="Edm.String" MaxLength="30" sap:label="Field name"/>
+                <Property Name="FieldNameUUID" Type="Edm.String" MaxLength="30" sap:label="Field name"/>
+                <Property Name="HeaderUUID" Type="Edm.Guid" sap:label="UUID"/>
+                <Property Name="HierarchyDescendantCount" Type="Edm.Int32"/>
+                <Property Name="HierarchyDistanceFromRoot" Type="Edm.Int32"/>
+                <Property Name="HierarchyDrillState" Type="Edm.String" MaxLength="20"/>
+                <Property Name="HierarchyPreorderRank" Type="Edm.Int32"/>
+                <Property Name="IsRootNode" Type="Edm.Boolean" sap:label="Truth Value"/>
+                <Property Name="LocalLastChangedAt" Type="Edm.DateTimeOffset" Precision="7" sap:label="Time Stamp"/>
+                <Property Name="MdeView" Type="Edm.String" MaxLength="30" sap:label="Object name"/>
+                <Property Name="NodeNumber" Type="Edm.Byte"/>
+                <Property Name="NodeUUID" Type="Edm.Guid" sap:label="UUID"/>
+                <Property Name="ParentDataSource" Type="Edm.String" MaxLength="30"/>
+                <Property Name="ParentEntityName" Type="Edm.String" MaxLength="40" sap:label="Parent Entity Name"/>
+                <Property Name="ParentUUID" Type="Edm.Guid" sap:label="UUID"/>
+                <Property Name="QueryImplementationClass" Type="Edm.String" MaxLength="30" sap:label="Object name"/>
+                <Property Name="RootUUID" Type="Edm.Guid" sap:label="UUID"/>
+                <Property Name="ServiceBinding" Type="Edm.String" MaxLength="30" sap:label="Object name"/>
+                <Property Name="ServiceDefinition" Type="Edm.String" MaxLength="30" sap:label="Object name"/>
+                <Property Name="ViewTypeValue" Type="Edm.String" MaxLength="1"/>
+            </ComplexType>
+            <Association Name="assoc_8BD5016932CCD2D0AF29AF4B7DDCC428" sap:content-version="1">
+                <End Type="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType" Multiplicity="1" Role="FromRole_assoc_8BD5016932CCD2D0AF29AF4B7DDCC428"/>
+                <End Type="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType" Multiplicity="0..1" Role="ToRole_assoc_8BD5016932CCD2D0AF29AF4B7DDCC428"/>
+            </Association>
+            <Association Name="assoc_4CA1BC5785FD253FA4B31C6EC291A4D7" sap:content-version="1">
+                <End Type="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType" Multiplicity="1" Role="FromRole_assoc_4CA1BC5785FD253FA4B31C6EC291A4D7">
+                    <OnDelete Action="Cascade"/>
+                </End>
+                <End Type="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType" Multiplicity="*" Role="ToRole_assoc_4CA1BC5785FD253FA4B31C6EC291A4D7"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_assoc_4CA1BC5785FD253FA4B31C6EC291A4D7">
+                        <PropertyRef Name="RapNodeUUID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_assoc_4CA1BC5785FD253FA4B31C6EC291A4D7">
+                        <PropertyRef Name="HeaderUUID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="assoc_5240E710FBAC1AE28721EC54C913900B" sap:content-version="1">
+                <End Type="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType" Multiplicity="1" Role="FromRole_assoc_5240E710FBAC1AE28721EC54C913900B"/>
+                <End Type="cds_zdmo_rapgeneratorbo.I_DraftAdministrativeDataType" Multiplicity="0..1" Role="ToRole_assoc_5240E710FBAC1AE28721EC54C913900B"/>
+            </Association>
+            <Association Name="assoc_ED84634C6708738D5A06E01E1C9C0FEF" sap:content-version="1">
+                <End Type="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType" Multiplicity="1" Role="FromRole_assoc_ED84634C6708738D5A06E01E1C9C0FEF"/>
+                <End Type="cds_zdmo_rapgeneratorbo.I_DraftAdministrativeDataType" Multiplicity="0..1" Role="ToRole_assoc_ED84634C6708738D5A06E01E1C9C0FEF"/>
+            </Association>
+            <Association Name="assoc_9FAD454768572E3FFE0A1CBE9C5528D3" sap:content-version="1">
+                <End Type="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType" Multiplicity="1" Role="FromRole_assoc_9FAD454768572E3FFE0A1CBE9C5528D3"/>
+                <End Type="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType" Multiplicity="0..1" Role="ToRole_assoc_9FAD454768572E3FFE0A1CBE9C5528D3"/>
+            </Association>
+            <Association Name="assoc_51AC1CE5B6740EBB2DDC97D4B2D82C1A" sap:content-version="1">
+                <End Type="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType" Multiplicity="1" Role="FromRole_assoc_51AC1CE5B6740EBB2DDC97D4B2D82C1A"/>
+                <End Type="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType" Multiplicity="1" Role="ToRole_assoc_51AC1CE5B6740EBB2DDC97D4B2D82C1A"/>
+            </Association>
+            <EntityContainer Name="cds_zdmo_rapgeneratorbo_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="SAP__Currencies" EntityType="cds_zdmo_rapgeneratorbo.SAP__Currency" sap:content-version="1"/>
+                <EntitySet Name="SAP__UnitsOfMeasure" EntityType="cds_zdmo_rapgeneratorbo.SAP__UnitOfMeasure" sap:content-version="1"/>
+                <EntitySet Name="I_DraftAdministrativeData" EntityType="cds_zdmo_rapgeneratorbo.I_DraftAdministrativeDataType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="RAPGeneratorProjects" EntityType="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType" sap:creatable="false" sap:searchable="true" sap:content-version="1" sap:deletable-path="Delete_mc" sap:updatable-path="Update_mc"/>
+                <EntitySet Name="RAPGeneratorProjectEntities" EntityType="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType" sap:creatable="false" sap:searchable="true" sap:content-version="1" sap:deletable-path="Delete_mc" sap:updatable-path="Update_mc"/>
+                <EntitySet Name="ABAPLanguageVersions" EntityType="cds_zdmo_rapgeneratorbo.ABAPLanguageVersionsType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="BindingTypes" EntityType="cds_zdmo_rapgeneratorbo.BindingTypesType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="zdmo_I_rap_generator_bool_VH" EntityType="cds_zdmo_rapgeneratorbo.zdmo_I_rap_generator_bool_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="DataSources" EntityType="cds_zdmo_rapgeneratorbo.DataSourcesType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="DataSourceTypes" EntityType="cds_zdmo_rapgeneratorbo.DataSourceTypesType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="DataSourceFields" EntityType="cds_zdmo_rapgeneratorbo.DataSourceFieldsType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ImplementationTypes" EntityType="cds_zdmo_rapgeneratorbo.ImplementationTypesType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="Packages" EntityType="cds_zdmo_rapgeneratorbo.PackagesType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <AssociationSet Name="assoc_8BD5016932CCD2D0AF29AF4B7DDCC428" Association="cds_zdmo_rapgeneratorbo.assoc_8BD5016932CCD2D0AF29AF4B7DDCC428" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="RAPGeneratorProjects" Role="FromRole_assoc_8BD5016932CCD2D0AF29AF4B7DDCC428"/>
+                    <End EntitySet="RAPGeneratorProjects" Role="ToRole_assoc_8BD5016932CCD2D0AF29AF4B7DDCC428"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_51AC1CE5B6740EBB2DDC97D4B2D82C1A" Association="cds_zdmo_rapgeneratorbo.assoc_51AC1CE5B6740EBB2DDC97D4B2D82C1A" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="RAPGeneratorProjectEntities" Role="FromRole_assoc_51AC1CE5B6740EBB2DDC97D4B2D82C1A"/>
+                    <End EntitySet="RAPGeneratorProjects" Role="ToRole_assoc_51AC1CE5B6740EBB2DDC97D4B2D82C1A"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_4CA1BC5785FD253FA4B31C6EC291A4D7" Association="cds_zdmo_rapgeneratorbo.assoc_4CA1BC5785FD253FA4B31C6EC291A4D7" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="RAPGeneratorProjects" Role="FromRole_assoc_4CA1BC5785FD253FA4B31C6EC291A4D7"/>
+                    <End EntitySet="RAPGeneratorProjectEntities" Role="ToRole_assoc_4CA1BC5785FD253FA4B31C6EC291A4D7"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_9FAD454768572E3FFE0A1CBE9C5528D3" Association="cds_zdmo_rapgeneratorbo.assoc_9FAD454768572E3FFE0A1CBE9C5528D3" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="RAPGeneratorProjectEntities" Role="FromRole_assoc_9FAD454768572E3FFE0A1CBE9C5528D3"/>
+                    <End EntitySet="RAPGeneratorProjectEntities" Role="ToRole_assoc_9FAD454768572E3FFE0A1CBE9C5528D3"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_5240E710FBAC1AE28721EC54C913900B" Association="cds_zdmo_rapgeneratorbo.assoc_5240E710FBAC1AE28721EC54C913900B" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="RAPGeneratorProjects" Role="FromRole_assoc_5240E710FBAC1AE28721EC54C913900B"/>
+                    <End EntitySet="I_DraftAdministrativeData" Role="ToRole_assoc_5240E710FBAC1AE28721EC54C913900B"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_ED84634C6708738D5A06E01E1C9C0FEF" Association="cds_zdmo_rapgeneratorbo.assoc_ED84634C6708738D5A06E01E1C9C0FEF" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="RAPGeneratorProjectEntities" Role="FromRole_assoc_ED84634C6708738D5A06E01E1C9C0FEF"/>
+                    <End EntitySet="I_DraftAdministrativeData" Role="ToRole_assoc_ED84634C6708738D5A06E01E1C9C0FEF"/>
+                </AssociationSet>
+                <FunctionImport Name="RAPGeneratorProjectsActivate" ReturnType="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType" EntitySet="RAPGeneratorProjects" m:HttpMethod="POST" sap:action-for="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType">
+                    <Parameter Name="RapNodeUUID" Type="Edm.Guid" Mode="In" sap:label="UUID"/>
+                    <Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In" sap:label="Is active"/>
+                </FunctionImport>
+                <FunctionImport Name="copyProject" ReturnType="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType" EntitySet="RAPGeneratorProjects" m:HttpMethod="POST" sap:action-for="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType" sap:applicable-path="copyProject_ac">
+                    <Parameter Name="RapNodeUUID" Type="Edm.Guid" Mode="In" sap:label="UUID"/>
+                    <Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In" sap:label="Is active"/>
+                </FunctionImport>
+                <FunctionImport Name="createBO" ReturnType="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType" EntitySet="RAPGeneratorProjects" m:HttpMethod="POST" sap:action-for="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType" sap:applicable-path="createBO_ac">
+                    <Parameter Name="RapNodeUUID" Type="Edm.Guid" Mode="In" sap:label="UUID"/>
+                    <Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In" sap:label="Is active"/>
+                </FunctionImport>
+                <FunctionImport Name="createBOandRootNode" ReturnType="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType" EntitySet="RAPGeneratorProjects" m:HttpMethod="POST">
+                    <Parameter Name="entity_name" Type="Edm.String" Mode="In" MaxLength="40" Nullable="true" sap:label="Root Entity Name"/>
+                    <Parameter Name="package_name" Type="Edm.String" Mode="In" MaxLength="30" Nullable="true" sap:value-list="standard" sap:label="Package"/>
+                </FunctionImport>
+                <FunctionImport Name="RAPGeneratorProjectsDiscard" ReturnType="cds_zdmo_rapgeneratorbo.DummyFunctionImportResult" m:HttpMethod="POST" sap:action-for="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType">
+                    <Parameter Name="RapNodeUUID" Type="Edm.Guid" Mode="In" sap:label="UUID"/>
+                    <Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In" sap:label="Is active"/>
+                </FunctionImport>
+                <FunctionImport Name="RAPGeneratorProjectsEdit" ReturnType="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType" EntitySet="RAPGeneratorProjects" m:HttpMethod="POST" sap:action-for="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType" sap:applicable-path="Edit_ac">
+                    <Parameter Name="RapNodeUUID" Type="Edm.Guid" Mode="In" sap:label="UUID"/>
+                    <Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In" sap:label="Is active"/>
+                    <Parameter Name="PreserveChanges" Type="Edm.Boolean" Mode="In" Nullable="true" sap:label="TRUE"/>
+                </FunctionImport>
+                <FunctionImport Name="RAPGeneratorProjectsPrepare" ReturnType="cds_zdmo_rapgeneratorbo.DummyFunctionImportResult" m:HttpMethod="POST" sap:action-for="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType" sap:applicable-path="Prepare_ac">
+                    <Parameter Name="RapNodeUUID" Type="Edm.Guid" Mode="In" sap:label="UUID"/>
+                    <Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In" sap:label="Is active"/>
+                </FunctionImport>
+                <FunctionImport Name="RAPGeneratorProjectsResume" ReturnType="cds_zdmo_rapgeneratorbo.DummyFunctionImportResult" m:HttpMethod="POST" sap:action-for="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType">
+                    <Parameter Name="RapNodeUUID" Type="Edm.Guid" Mode="In" sap:label="UUID"/>
+                    <Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In" sap:label="Is active"/>
+                </FunctionImport>
+                <FunctionImport Name="addChild2" ReturnType="cds_zdmo_rapgeneratorbo.ZDMO_R_RapGeneratorBONode" m:HttpMethod="POST" sap:action-for="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType" sap:applicable-path="addChild2_ac">
+                    <Parameter Name="NodeUUID" Type="Edm.Guid" Mode="In" sap:label="UUID"/>
+                    <Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In" sap:label="Is active"/>
+                    <Parameter Name="entity_name" Type="Edm.String" Mode="In" MaxLength="40" Nullable="true" sap:label="Child Entity Name"/>
+                </FunctionImport>
+            </EntityContainer>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.cds_zdmo_rapgeneratorbo_Entities/RAPGeneratorProjects" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.DraftRoot">
+                    <Record>
+                        <PropertyValue Property="ActivationAction" String="cds_zdmo_rapgeneratorbo.cds_zdmo_rapgeneratorbo_Entities/RAPGeneratorProjectsActivate"/>
+                        <PropertyValue Property="DiscardAction" String="cds_zdmo_rapgeneratorbo.cds_zdmo_rapgeneratorbo_Entities/RAPGeneratorProjectsDiscard"/>
+                        <PropertyValue Property="EditAction" String="cds_zdmo_rapgeneratorbo.cds_zdmo_rapgeneratorbo_Entities/RAPGeneratorProjectsEdit"/>
+                        <PropertyValue Property="PreparationAction" String="cds_zdmo_rapgeneratorbo.cds_zdmo_rapgeneratorbo_Entities/RAPGeneratorProjectsPrepare"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>copyProject_ac</PropertyPath>
+                                <PropertyPath>createBO_ac</PropertyPath>
+                                <PropertyPath>Edit_ac</PropertyPath>
+                                <PropertyPath>Prepare_ac</PropertyPath>
+                                <PropertyPath>AddToManageBusinessConfig_fc</PropertyPath>
+                                <PropertyPath>ADTLink_fc</PropertyPath>
+                                <PropertyPath>CustomizingTable_fc</PropertyPath>
+                                <PropertyPath>MultiInlineEdit_fc</PropertyPath>
+                                <PropertyPath>Namespace_fc</PropertyPath>
+                                <PropertyPath>PackageName_fc</PropertyPath>
+                                <PropertyPath>Delete_mc</PropertyPath>
+                                <PropertyPath>Update_mc</PropertyPath>
+                                <PropertyPath>HideADTLink</PropertyPath>
+                                <PropertyPath>JobStatus</PropertyPath>
+                                <PropertyPath>JobStatusText</PropertyPath>
+                                <PropertyPath>JobStatusCriticality</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="JsonString"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>copyProject_ac</PropertyPath>
+                                <PropertyPath>createBO_ac</PropertyPath>
+                                <PropertyPath>Edit_ac</PropertyPath>
+                                <PropertyPath>Prepare_ac</PropertyPath>
+                                <PropertyPath>AddToManageBusinessConfig_fc</PropertyPath>
+                                <PropertyPath>ADTLink_fc</PropertyPath>
+                                <PropertyPath>CustomizingTable_fc</PropertyPath>
+                                <PropertyPath>MultiInlineEdit_fc</PropertyPath>
+                                <PropertyPath>Namespace_fc</PropertyPath>
+                                <PropertyPath>PackageName_fc</PropertyPath>
+                                <PropertyPath>Delete_mc</PropertyPath>
+                                <PropertyPath>Update_mc</PropertyPath>
+                                <PropertyPath>JsonString</PropertyPath>
+                                <PropertyPath>HideADTLink</PropertyPath>
+                                <PropertyPath>JobStatus</PropertyPath>
+                                <PropertyPath>JobStatusText</PropertyPath>
+                                <PropertyPath>JobStatusCriticality</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.cds_zdmo_rapgeneratorbo_Entities/RAPGeneratorProjectEntities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.DraftNode">
+                    <Record/>
+                </Annotation>
+                <Annotation Term="Common.DraftActivationVia">
+                    <Collection>
+                        <String>cds_zdmo_rapgeneratorbo.cds_zdmo_rapgeneratorbo_Entities/RAPGeneratorProjects</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>addChild2_ac</PropertyPath>
+                                <PropertyPath>ControlStructure_fc</PropertyPath>
+                                <PropertyPath>DraftTableName_fc</PropertyPath>
+                                <PropertyPath>FieldNameCreatedAt_fc</PropertyPath>
+                                <PropertyPath>FieldNameCreatedBy_fc</PropertyPath>
+                                <PropertyPath>FieldNameEtagMaster_fc</PropertyPath>
+                                <PropertyPath>FieldNameLastChangedBy_fc</PropertyPath>
+                                <PropertyPath>FieldNameParentUUID_fc</PropertyPath>
+                                <PropertyPath>FieldNameRootUUID_fc</PropertyPath>
+                                <PropertyPath>FieldNameTotalEtag_fc</PropertyPath>
+                                <PropertyPath>FieldNameUUID_fc</PropertyPath>
+                                <PropertyPath>QueryImplementationClass_fc</PropertyPath>
+                                <PropertyPath>ServiceBinding_fc</PropertyPath>
+                                <PropertyPath>ServiceDefinition_fc</PropertyPath>
+                                <PropertyPath>Delete_mc</PropertyPath>
+                                <PropertyPath>Update_mc</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>addChild2_ac</PropertyPath>
+                                <PropertyPath>ControlStructure_fc</PropertyPath>
+                                <PropertyPath>DraftTableName_fc</PropertyPath>
+                                <PropertyPath>FieldNameCreatedAt_fc</PropertyPath>
+                                <PropertyPath>FieldNameCreatedBy_fc</PropertyPath>
+                                <PropertyPath>FieldNameEtagMaster_fc</PropertyPath>
+                                <PropertyPath>FieldNameLastChangedBy_fc</PropertyPath>
+                                <PropertyPath>FieldNameParentUUID_fc</PropertyPath>
+                                <PropertyPath>FieldNameRootUUID_fc</PropertyPath>
+                                <PropertyPath>FieldNameTotalEtag_fc</PropertyPath>
+                                <PropertyPath>FieldNameUUID_fc</PropertyPath>
+                                <PropertyPath>QueryImplementationClass_fc</PropertyPath>
+                                <PropertyPath>ServiceBinding_fc</PropertyPath>
+                                <PropertyPath>ServiceDefinition_fc</PropertyPath>
+                                <PropertyPath>Delete_mc</PropertyPath>
+                                <PropertyPath>Update_mc</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/PackageName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="CollectionPath" String="Packages"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="PackageName"/>
+                                    <PropertyValue Property="ValueListProperty" String="name"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ABAPLanguageVersion"/>
+                                    <PropertyValue Property="ValueListProperty" String="language_version"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/ImplementationType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="CollectionPath" String="ImplementationTypes"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ImplementationType"/>
+                                    <PropertyValue Property="ValueListProperty" String="name"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/DataSourceType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="CollectionPath" String="DataSourceTypes"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSourceType"/>
+                                    <PropertyValue Property="ValueListProperty" String="type"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/ABAPLanguageVersion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="CollectionPath" String="ABAPLanguageVersions"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ABAPLanguageVersion"/>
+                                    <PropertyValue Property="ValueListProperty" String="language_version"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/BindingType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="CollectionPath" String="BindingTypes"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="BindingType"/>
+                                    <PropertyValue Property="ValueListProperty" String="name"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/DraftEnabled" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="CollectionPath" String="zdmo_I_rap_generator_bool_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DraftEnabled"/>
+                                    <PropertyValue Property="ValueListProperty" String="bool_value"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="name"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.cds_zdmo_rapgeneratorbo_Entities/createBOandRootNode/package_name" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="CollectionPath" String="Packages"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="package_name"/>
+                                    <PropertyValue Property="ValueListProperty" String="name"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/ABAPLanguageVersion" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="CollectionPath" String="ABAPLanguageVersions"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ABAPLanguageVersion"/>
+                                    <PropertyValue Property="ValueListProperty" String="language_version"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/DataSourceType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="CollectionPath" String="DataSourceTypes"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSourceType"/>
+                                    <PropertyValue Property="ValueListProperty" String="type"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/DataSource" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="CollectionPath" String="DataSources"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSource"/>
+                                    <PropertyValue Property="ValueListProperty" String="name"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSourceType"/>
+                                    <PropertyValue Property="ValueListProperty" String="type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ABAPLanguageVersion"/>
+                                    <PropertyValue Property="ValueListProperty" String="language_version"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ParentDataSource"/>
+                                    <PropertyValue Property="ValueListProperty" String="parent_data_source"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="IsRootNode"/>
+                                    <PropertyValue Property="ValueListProperty" String="is_root_node"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="PackageName"/>
+                                    <PropertyValue Property="ValueListProperty" String="package_name"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/FieldNameObjectID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="CollectionPath" String="DataSourceFields"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="FieldNameObjectID"/>
+                                    <PropertyValue Property="ValueListProperty" String="field"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSource"/>
+                                    <PropertyValue Property="ValueListProperty" String="name"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSourceType"/>
+                                    <PropertyValue Property="ValueListProperty" String="type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ABAPLanguageVersion"/>
+                                    <PropertyValue Property="ValueListProperty" String="language_version"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="data_element"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_length"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_decimals"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/FieldNameEtagMaster" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="CollectionPath" String="DataSourceFields"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="FieldNameEtagMaster"/>
+                                    <PropertyValue Property="ValueListProperty" String="field"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSource"/>
+                                    <PropertyValue Property="ValueListProperty" String="name"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSourceType"/>
+                                    <PropertyValue Property="ValueListProperty" String="type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ABAPLanguageVersion"/>
+                                    <PropertyValue Property="ValueListProperty" String="language_version"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="data_element"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_length"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_decimals"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/FieldNameTotalEtag" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="CollectionPath" String="DataSourceFields"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="FieldNameTotalEtag"/>
+                                    <PropertyValue Property="ValueListProperty" String="field"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSource"/>
+                                    <PropertyValue Property="ValueListProperty" String="name"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSourceType"/>
+                                    <PropertyValue Property="ValueListProperty" String="type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ABAPLanguageVersion"/>
+                                    <PropertyValue Property="ValueListProperty" String="language_version"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="data_element"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_length"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_decimals"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/FieldNameUUID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="CollectionPath" String="DataSourceFields"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="FieldNameUUID"/>
+                                    <PropertyValue Property="ValueListProperty" String="field"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSource"/>
+                                    <PropertyValue Property="ValueListProperty" String="name"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSourceType"/>
+                                    <PropertyValue Property="ValueListProperty" String="type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ABAPLanguageVersion"/>
+                                    <PropertyValue Property="ValueListProperty" String="language_version"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="data_element"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_length"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_decimals"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/FieldNameParentUUID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="CollectionPath" String="DataSourceFields"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="FieldNameParentUUID"/>
+                                    <PropertyValue Property="ValueListProperty" String="field"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSource"/>
+                                    <PropertyValue Property="ValueListProperty" String="name"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSourceType"/>
+                                    <PropertyValue Property="ValueListProperty" String="type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ABAPLanguageVersion"/>
+                                    <PropertyValue Property="ValueListProperty" String="language_version"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="data_element"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_length"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_decimals"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/FieldNameRootUUID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="CollectionPath" String="DataSourceFields"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="FieldNameRootUUID"/>
+                                    <PropertyValue Property="ValueListProperty" String="field"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSource"/>
+                                    <PropertyValue Property="ValueListProperty" String="name"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSourceType"/>
+                                    <PropertyValue Property="ValueListProperty" String="type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ABAPLanguageVersion"/>
+                                    <PropertyValue Property="ValueListProperty" String="language_version"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="data_element"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_length"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_decimals"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/FieldNameCreatedBy" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="CollectionPath" String="DataSourceFields"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="FieldNameCreatedBy"/>
+                                    <PropertyValue Property="ValueListProperty" String="field"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSource"/>
+                                    <PropertyValue Property="ValueListProperty" String="name"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSourceType"/>
+                                    <PropertyValue Property="ValueListProperty" String="type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ABAPLanguageVersion"/>
+                                    <PropertyValue Property="ValueListProperty" String="language_version"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="data_element"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_length"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_decimals"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/FieldNameCreatedAt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="CollectionPath" String="DataSourceFields"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="FieldNameCreatedAt"/>
+                                    <PropertyValue Property="ValueListProperty" String="field"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSource"/>
+                                    <PropertyValue Property="ValueListProperty" String="name"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSourceType"/>
+                                    <PropertyValue Property="ValueListProperty" String="type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ABAPLanguageVersion"/>
+                                    <PropertyValue Property="ValueListProperty" String="language_version"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="data_element"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_length"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_decimals"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/FieldNameLastChangedBy" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="CollectionPath" String="DataSourceFields"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="FieldNameLastChangedBy"/>
+                                    <PropertyValue Property="ValueListProperty" String="field"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSource"/>
+                                    <PropertyValue Property="ValueListProperty" String="name"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSourceType"/>
+                                    <PropertyValue Property="ValueListProperty" String="type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ABAPLanguageVersion"/>
+                                    <PropertyValue Property="ValueListProperty" String="language_version"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="data_element"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_length"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_decimals"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/FieldNameLastChangedAt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="CollectionPath" String="DataSourceFields"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="FieldNameLastChangedAt"/>
+                                    <PropertyValue Property="ValueListProperty" String="field"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSource"/>
+                                    <PropertyValue Property="ValueListProperty" String="name"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSourceType"/>
+                                    <PropertyValue Property="ValueListProperty" String="type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ABAPLanguageVersion"/>
+                                    <PropertyValue Property="ValueListProperty" String="language_version"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="data_element"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_length"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_decimals"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/FieldNameLocLastChangedAt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String=""/>
+                        <PropertyValue Property="CollectionPath" String="DataSourceFields"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="FieldNameLocLastChangedAt"/>
+                                    <PropertyValue Property="ValueListProperty" String="field"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSource"/>
+                                    <PropertyValue Property="ValueListProperty" String="name"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DataSourceType"/>
+                                    <PropertyValue Property="ValueListProperty" String="type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ABAPLanguageVersion"/>
+                                    <PropertyValue Property="ValueListProperty" String="language_version"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="data_element"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_length"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="built_in_type_decimals"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.cds_zdmo_rapgeneratorbo_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/BehaviorImplementationClass" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/CdsIView" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/CdsPView" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/CdsRView" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/EntityName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/MdeView" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>EntityName</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>BoName</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.cds_zdmo_rapgeneratorbo_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Org.OData.Capabilities.V1.BatchSupport">
+                    <Record Type="Org.OData.Capabilities.V1.BatchSupportType">
+                        <PropertyValue Property="ReferencesAcrossChangeSetsSupported" Bool="true"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__CodeList.CurrencyCodes">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__Currencies"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__CodeList.UnitsOfMeasure">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__UnitsOfMeasure"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.SAP__Currency/CurrencyCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.Text" Path="Text"/>
+                <Annotation Term="SAP__common.UnitSpecificScale" Path="DecimalPlaces"/>
+                <Annotation Term="SAP__CodeList.StandardCode" Path="ISOCode"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.SAP__UnitOfMeasure/UnitCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.Text" Path="Text"/>
+                <Annotation Term="SAP__common.UnitSpecificScale" Path="DecimalPlaces"/>
+                <Annotation Term="SAP__CodeList.StandardCode" Path="ISOCode"/>
+                <Annotation Term="SAP__CodeList.ExternalCode" Path="ExternalCode"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.SAP__UnitOfMeasure" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__core.AlternateKeys">
+                    <Collection>
+                        <Record>
+                            <PropertyValue Property="Key">
+                                <Collection>
+                                    <Record>
+                                        <PropertyValue Property="Name" Path="ExternalCode"/>
+                                        <PropertyValue Property="Alias" String="ExternalCode"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <atom:link rel="self" href="http://s4htcsaptui.westeurope.cloudapp.azure.com:50000/sap/opu/odata/sap/ZDMO_UI_RAP_GENERATOR_O2/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://s4htcsaptui.westeurope.cloudapp.azure.com:50000/sap/opu/odata/sap/ZDMO_UI_RAP_GENERATOR_O2/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

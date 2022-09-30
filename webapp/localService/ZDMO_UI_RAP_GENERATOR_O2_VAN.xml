@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../../sap/zdmo_ui_rap_generator_o2/$metadata">
+        <edmx:Include Namespace="ZDMO_UI_RAP_GENERATOR_O2" Alias="SAP"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="zdmo_ui_rap_generator_o2_van.v1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <Annotations Target="cds_zdmo_rapgeneratorbo.I_DraftAdministrativeDataType/DraftUUID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.I_DraftAdministrativeDataType/DraftEntityType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.I_DraftAdministrativeDataType/DraftAccessType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.I_DraftAdministrativeDataType/ProcessingStartDateTime">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.I_DraftAdministrativeDataType/DraftIsKeptByUser">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.I_DraftAdministrativeDataType/EnqueueStartDateTime">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.I_DraftAdministrativeDataType/DraftIsCreatedByMe">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.I_DraftAdministrativeDataType/DraftIsLastChangedByMe">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.I_DraftAdministrativeDataType/DraftIsProcessedByMe">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.I_DraftAdministrativeDataType/CreatedByUserDescription">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.I_DraftAdministrativeDataType/LastChangedByUserDescription">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.I_DraftAdministrativeDataType/InProcessByUserDescription">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/HasDraftEntity">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/DraftEntityCreationDateTime">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/DraftEntityLastChangeDateTime">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/HasActiveEntity">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/IsActiveEntity">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/RapNodeUUID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/SkipActivation">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/PackageLanguageVersion">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/BusinessConfName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/BusinessConfIdentifier">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/BusinessConfDescription">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/CreatedBy">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/CreatedAt">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/LastChangedBy">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/LocalLastChangedAt">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/copyProject_ac">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/createBO_ac">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/Edit_ac">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/Prepare_ac">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/AddToManageBusinessConfig_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/ADTLink_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/CustomizingTable_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/MultiInlineEdit_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/Namespace_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/PackageName_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/Delete_mc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/Update_mc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType/JsonString">
+                <Annotation Term="UI.MultiLineText"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectsType">
+                <Annotation Term="UI.DataPoint" Qualifier="JobStatusText">
+                    <Record>
+                        <PropertyValue Property="Value" Path="JobStatusText"/>
+                        <PropertyValue Property="Title" String="Generation Job Status"/>
+                        <PropertyValue Property="TargetValue" Path="JobStatusText"/>
+                        <PropertyValue Property="Criticality" Path="JobStatusCriticality"/>
+                        <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithIcon"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="Project header data"/>
+                            <PropertyValue Property="ID" String="idCollection"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Used to build repository object names"/>
+                                        <PropertyValue Property="ID" String="Fieldgroup3-ID"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Fieldgroup3"/>
+                                    </Record>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Implementation Details"/>
+                                        <PropertyValue Property="ID" String="Fieldgroup2-ID"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Fieldgroup2"/>
+                                    </Record>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Generator command line options"/>
+                                        <PropertyValue Property="ID" String="Fieldgroup4-ID"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Fieldgroup4"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Entities"/>
+                            <PropertyValue Property="ID" String="idLineitem"/>
+                            <PropertyValue Property="Target" AnnotationPath="to_RAPGeneratorBONode/@UI.LineItem"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.HeaderFacets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Fieldgroup1"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Fieldgroup1">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Generation Status"/>
+                                    <PropertyValue Property="Criticality" Path="JobStatusCriticality"/>
+                                    <PropertyValue Property="Value" Path="JobStatusText"/>
+                                </Record>
+                                <Record Type="UI.DataFieldWithUrl">
+                                    <PropertyValue Property="Label" String="ADT Link"/>
+                                    <PropertyValue Property="Value" Path="ADTLink"/>
+                                    <PropertyValue Property="Url" Path="ADTLink"/>
+                                    <Annotation Term="UI.Hidden" Path="HideADTLink"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Fieldgroup2">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Implementation and Key Type"/>
+                                    <PropertyValue Property="Value" Path="ImplementationType"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Datasource Type"/>
+                                    <PropertyValue Property="Value" Path="DataSourceType"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Binding Type"/>
+                                    <PropertyValue Property="Value" Path="BindingType"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Draft enabled"/>
+                                    <PropertyValue Property="Value" Path="DraftEnabled"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Multi Inline Edit"/>
+                                    <PropertyValue Property="Value" Path="MultiInlineEdit"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Customizing Table"/>
+                                    <PropertyValue Property="Value" Path="CustomizingTable"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Register in Business Configuration App"/>
+                                    <PropertyValue Property="Value" Path="AddToManageBusinessConfig"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Fieldgroup3">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Namespace"/>
+                                    <PropertyValue Property="Value" Path="Namespace"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Prefix"/>
+                                    <PropertyValue Property="Value" Path="Prefix"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Suffix"/>
+                                    <PropertyValue Property="Value" Path="Suffix"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Fieldgroup4">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Transport request"/>
+                                    <PropertyValue Property="Value" Path="TransportRequest"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Json string"/>
+                                    <PropertyValue Property="Value" Path="JsonString"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="RAP Generator Project"/>
+                        <PropertyValue Property="TypeNamePlural" String="RAP Generator Projects"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="RAP Business Object"/>
+                                <PropertyValue Property="Value" Path="BoName"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="Package Name"/>
+                                <PropertyValue Property="Value" Path="PackageName"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Identification">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Root BO interface view"/>
+                            <PropertyValue Property="Value" Path="BoName"/>
+                        </Record>
+                        <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Label" String="Generate repository objects"/>
+                            <PropertyValue Property="Action" String="cds_zdmo_rapgeneratorbo.cds_zdmo_rapgeneratorbo_Entities/createBO"/>
+                            <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/>
+                        </Record>
+                        <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Label" String="Copy Project"/>
+                            <PropertyValue Property="Action" String="cds_zdmo_rapgeneratorbo.cds_zdmo_rapgeneratorbo_Entities/copyProject"/>
+                            <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="RAP Business Object"/>
+                            <PropertyValue Property="Value" Path="BoName"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Package"/>
+                            <PropertyValue Property="Value" Path="PackageName"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataFieldWithUrl">
+                            <PropertyValue Property="Label" String="ADT Link"/>
+                            <PropertyValue Property="Value" Path="ADTLink"/>
+                            <PropertyValue Property="Url" Path="ADTLink"/>
+                            <Annotation Term="UI.Hidden" Path="HideADTLink"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Implementation Type"/>
+                            <PropertyValue Property="Value" Path="ImplementationType"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Data Source Type"/>
+                            <PropertyValue Property="Value" Path="DataSourceType"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Binding Type"/>
+                            <PropertyValue Property="Value" Path="BindingType"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Last changed at"/>
+                            <PropertyValue Property="Value" Path="LastChangedAt"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Draft enabled"/>
+                            <PropertyValue Property="Value" Path="DraftEnabled"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Generation Status"/>
+                            <PropertyValue Property="Criticality" Path="JobStatusCriticality"/>
+                            <PropertyValue Property="Value" Path="JobStatusText"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Label" String="Copy Project"/>
+                            <PropertyValue Property="Action" String="cds_zdmo_rapgeneratorbo.cds_zdmo_rapgeneratorbo_Entities/copyProject"/>
+                            <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/>
+                        </Record>
+                        <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Label" String="New Project"/>
+                            <PropertyValue Property="Action" String="cds_zdmo_rapgeneratorbo.cds_zdmo_rapgeneratorbo_Entities/createBOandRootNode"/>
+                            <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="BoName"/>
+                                    <PropertyValue Property="Descending" Bool="true"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@UI.LineItem</AnnotationPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>ImplementationType</PropertyPath>
+                        <PropertyPath>DataSourceType</PropertyPath>
+                        <PropertyPath>BindingType</PropertyPath>
+                        <PropertyPath>DraftEnabled</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/HasDraftEntity">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/DraftEntityCreationDateTime">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/DraftEntityLastChangeDateTime">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/HasActiveEntity">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/IsActiveEntity">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/NodeUUID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/HeaderUUID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/ABAPLanguageVersion">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/DataSourceType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/LocalLastChangedAt">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/addChild2_ac">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/ControlStructure_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/DraftTableName_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/FieldNameCreatedAt_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/FieldNameCreatedBy_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/FieldNameEtagMaster_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/FieldNameLastChangedBy_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/FieldNameParentUUID_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/FieldNameRootUUID_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/FieldNameTotalEtag_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/FieldNameUUID_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/QueryImplementationClass_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/ServiceBinding_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/ServiceDefinition_fc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/Delete_mc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType/Update_mc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.RAPGeneratorProjectEntitiesType">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="Entity"/>
+                            <PropertyValue Property="ID" String="idNodes"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="ID" String="Fieldgroup1-ID"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Fieldgroup1"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                        <Record Type="UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="Field names"/>
+                            <PropertyValue Property="ID" String="Facet2-ID"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Etag and semantic key fields"/>
+                                        <PropertyValue Property="ID" String="Fieldgroup4-ID"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Fieldgroup4"/>
+                                    </Record>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="UUID based fields"/>
+                                        <PropertyValue Property="ID" String="Fieldgroup5-ID"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Fieldgroup5"/>
+                                    </Record>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Administrative fields"/>
+                                        <PropertyValue Property="ID" String="Fieldgroup6-ID"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Fieldgroup6"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                        <Record Type="UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="Repository Object Names"/>
+                            <PropertyValue Property="ID" String="Facet3-ID"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Mandatory"/>
+                                        <PropertyValue Property="ID" String="Fieldgroup7-ID"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Fieldgroup7"/>
+                                    </Record>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Root node specific"/>
+                                        <PropertyValue Property="ID" String="Fieldgroup8-ID"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Fieldgroup8"/>
+                                    </Record>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Unmanaged scenarios"/>
+                                        <PropertyValue Property="ID" String="Fieldgroup9-ID"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Fieldgroup9"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Fieldgroup1">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Data Source"/>
+                                    <PropertyValue Property="Value" Path="DataSource"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Entity Name"/>
+                                    <PropertyValue Property="Value" Path="EntityName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Is root"/>
+                                    <PropertyValue Property="Value" Path="IsRootNode"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Parent Entity Name"/>
+                                    <PropertyValue Property="Value" Path="ParentEntityName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Parent Data Source"/>
+                                    <PropertyValue Property="Value" Path="ParentDataSource"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Fieldgroup4">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Semantic Key Field (object_id)"/>
+                                    <PropertyValue Property="Value" Path="FieldNameObjectID"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="ETag Master (OData - Last change to this node)"/>
+                                    <PropertyValue Property="Value" Path="FieldNameEtagMaster"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Total ETag (Draft only - Last change to BO)"/>
+                                    <PropertyValue Property="Value" Path="FieldNameTotalEtag"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Fieldgroup5">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="UUID"/>
+                                    <PropertyValue Property="Value" Path="FieldNameUUID"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Parent UUID"/>
+                                    <PropertyValue Property="Value" Path="FieldNameParentUUID"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Root UUID"/>
+                                    <PropertyValue Property="Value" Path="FieldNameRootUUID"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Fieldgroup6">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Last Changed by"/>
+                                    <PropertyValue Property="Value" Path="FieldNameLastChangedBy"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Created at"/>
+                                    <PropertyValue Property="Value" Path="FieldNameCreatedAt"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Created by"/>
+                                    <PropertyValue Property="Value" Path="FieldNameCreatedBy"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Last Changed at"/>
+                                    <PropertyValue Property="Value" Path="FieldNameLastChangedAt"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Local Last Changed at"/>
+                                    <PropertyValue Property="Value" Path="FieldNameLocLastChangedAt"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Fieldgroup7">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="CDS restricted reuse view / Behav. Def."/>
+                                    <PropertyValue Property="Value" Path="CdsRView"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="CDS projection view / Behav. Projection"/>
+                                    <PropertyValue Property="Value" Path="CdsPView"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="CDS interface view"/>
+                                    <PropertyValue Property="Value" Path="CdsIView"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Metadata extension view"/>
+                                    <PropertyValue Property="Value" Path="MdeView"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Behavior Impl. Class"/>
+                                    <PropertyValue Property="Value" Path="BehaviorImplementationClass"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Draft table"/>
+                                    <PropertyValue Property="Value" Path="DraftTableName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Fieldgroup8">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Service Binding"/>
+                                    <PropertyValue Property="Value" Path="ServiceBinding"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Service Definition"/>
+                                    <PropertyValue Property="Value" Path="ServiceDefinition"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Fieldgroup9">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Control Structure"/>
+                                    <PropertyValue Property="Value" Path="ControlStructure"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Query implementation class"/>
+                                    <PropertyValue Property="Value" Path="QueryImplementationClass"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Entity"/>
+                        <PropertyValue Property="TypeNamePlural" String="Entities"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="Entity Name"/>
+                                <PropertyValue Property="Value" Path="EntityName"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Identification">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Distance from Root"/>
+                            <PropertyValue Property="Value" Path="HierarchyDistanceFromRoot"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Entity Name"/>
+                            <PropertyValue Property="Value" Path="EntityName"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Distance from Root"/>
+                            <PropertyValue Property="Value" Path="HierarchyDistanceFromRoot"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Root"/>
+                            <PropertyValue Property="Value" Path="IsRootNode"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Parent Entity Name"/>
+                            <PropertyValue Property="Value" Path="ParentEntityName"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Label" String="Add Child"/>
+                            <PropertyValue Property="Action" String="cds_zdmo_rapgeneratorbo.cds_zdmo_rapgeneratorbo_Entities/addChild2"/>
+                            <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="HierarchyDistanceFromRoot"/>
+                                    <PropertyValue Property="Descending" Bool="false"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@UI.LineItem</AnnotationPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.DataSourcesType/type">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.DataSourcesType/language_version">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.DataSourcesType/parent_data_source">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.DataSourcesType/is_root_node">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.DataSourcesType/package_name">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.DataSourceFieldsType/name">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.DataSourceFieldsType/type">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.DataSourceFieldsType/language_version">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zdmo_rapgeneratorbo.PackagesType/language_version">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
